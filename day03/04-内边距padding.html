@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>内边距padding</title>
+
+  <style>
+
+    div {
+      width: 200px;
+      height: 200px;
+      border:1px solid red;
+      /* 左内边距 */
+      /* padding-left: 10px;
+      padding-top: 30px; */
+
+      /* padding  简写 复合写法 */
+      /* padding: 20px; 上下左右 都是 20内边距 */
+      /* padding: 10px 20px; 上下10 左右20 内边距 */
+      /* padding: 10px 20px 30px; 上10 左右20 下30 内边距 */
+      /* padding: 10xp 20px 30xp 40px; 上10 右20 下30 左40 内边距 顺时针 */
+      padding: 10xp 20px 30xp 40px;
+    }
+   
+  </style>
+</head>
+<body>
+
+  <!-- 
+
+    padding属性用于设置内边距,是指边框与内容之间的距离
+
+    padding-left        左内边距
+    padding-right       右内边距
+    padding-top         上内边距
+    
+    当我们给盒子指定pading值后,发生了2件事:
+     1.内容和边框有了距离,添加了内边距
+     2.盒子会变大了
+
+     注意:后面跟几个数值表示的意思是不一样的
+     值的个数  表达意思
+     1个值      padding:上下左右内边距;
+     2个值      padding:上下内边距 左右内边距
+     3个值      padding:上内边距 左右内边距 下内边距;
+     4个值      padding:上内边距 右内边距 下内边距 左内边距;
+
+
+   -->
+  <div>王者荣耀</div>
+  
+</body>
+</html>

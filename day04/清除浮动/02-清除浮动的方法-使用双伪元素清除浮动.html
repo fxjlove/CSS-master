@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动的方法-使用双伪元素清除浮动</title>
+    <style>
+         /* ~~~~~~~~~~~~~~~~清除浮动begin~~~~~~~~~~~~~~~~*/
+         /* 声明清除浮动的样式 */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            /* ie7,7专门清除浮动的样式 */
+            *zoom: 1;
+        } 
+        /* ~~~~~~~~~~~~~~~~清除浮动end~~~~~~~~~~~~~~~~*/
+
+
+        .one {
+            width: 500px;
+            background-color: pink;
+            border: 1px solid red;
+        }
+        .damao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        .ermao {
+            float: left;
+            width: 250px;
+            height: 250px;
+            background-color: skyblue;
+        }
+        .two {
+            width: 700px;
+            height: 150px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+      使用方法:
+            .clearfix:befor,.clearfix:after {
+                content:"";
+                display:table;
+            }
+            .clearfix:after {
+                clear:both;
+            }
+            .clearfix {
+                *zoom:1;
+            }
+            优点:代码更简洁
+            缺点:由于IE6-7不支持:after,使用zoom:1 触发hasLayout
+            代表网站:小米、腾讯等
+
+     -->
+    <div class="one clearfix">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    
+    <div class="two"></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>外边距-文字居中和盒子居中区别</title>
+
+  <style>
+    div {
+      width: 600px;
+      height: 300px;
+      background-color: pink;
+      /* 块级盒子水平居中 */
+      margin: 50px auto;
+      /* 盒子里面的文字水平居中  而且还可以让 行内元素 和 行内块居中对齐 */
+      text-align: center;
+    }      
+    
+   
+  </style>
+</head>
+<body>
+
+  <!-- 
+
+   文字居中和盒子居中区别:
+    1.文字水平居中是 text-aligin:center 而且还可以让 行内元素 和 行内块居中对齐
+    2.盒子水平居中 左右margin改为auto
+
+    text-align: center;  文字水平居中
+    margin:10px auto;   盒子水平居中 左右margin 改为auto 就可以了 上下margin都可以
+
+
+   -->
+  <div>稳住 <strong>我们能赢</strong> <input type="text"></div>
+
+ 
+  
+</body>
+</html>

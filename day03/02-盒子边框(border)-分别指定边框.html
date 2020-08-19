@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子边框(border)-分别指定边框</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 400px;
+          /* 上边框 */
+          border-top: 2px solid red;
+          border-left: 2px solid green;
+          border-right: 2px solid blue;
+          border-bottom: 2px solid yellow;
+        }
+        input {
+            /* border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px dashed red; */
+
+            /* 四个边框都去掉 先写大的,后写小的 */
+            border: none;
+            border-bottom: 1px dashed red; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+
+            盒子边框写法总结表:很多情况下,我们嘘不要指定4个边框,我们是可以单独给4个边框分别指定的
+            上边框                          下边框                          左边框                            右边框
+            border-top-style样式;          border-bottom-style样式;        border-left-style样式;           border-right-style样式;
+            border-top-width宽度;          border-bottom-width宽度;        border-left-width宽度;           border-right-width宽度;  
+            border-top-color颜色;          border-bottom-color颜色;        border-left-color颜色;           border-right-color颜色;  
+            border-top:宽度 样式 颜色;      border-bottom:宽度 样式 颜色;     border-left:宽度 样式 颜色;       border-right:宽度 样式 颜色;
+
+
+
+     -->
+    <div></div>
+    用户名:<input type="text" /> <br />
+    密码:<input type="text" />
+
+</body>
+</html>

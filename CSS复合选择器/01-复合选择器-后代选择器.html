@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后代选择器</title>
+
+    <style>
+        /* 山东 济南 */
+        .nav a {
+            color: pink;
+        }
+        .wangsicong ul li{
+            color: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- 
+        又称包含选择器
+    作用:用来选择元素或元素组的子孙后代
+    其写法就是把外层标签写在前面,内层标签写在后米娜,中间用空格分隔,先写父亲爷爷,再写儿子孙子
+
+    父级 子级{属性:属性值; 属性:属性值;
+    
+    .class h3{color:red; font-sizeL16px}
+-->
+
+    <div class="nav">
+        <a href="#">内部链接</a>
+        <a href="#">内部链接</a>
+        <a href="#">内部链接</a>
+    </div>
+    <a href="#">外部链接</a>
+    <a href="#">外部链接</a>
+    <a href="#">外部链接</a>
+
+    <!-- 输入:ul>ul*3 -->
+    <ul>
+        <li>一条狗</li>
+        <li>一条狗</li>
+        <li>一条狗</li>
+    </ul>
+    <div class="wangsicong">
+        <ul>
+            <li>王可可是一条狗</li>
+            <li>王可可是一条狗</li>
+            <li>王可可是一条狗</li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+</html>

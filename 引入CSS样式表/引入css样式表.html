@@ -1,0 +1,45 @@
+引入css样式表(书写位置)
+1.行内样式(内联样式)
+    是通过标签的style属性来设置元素的样式
+    <标签名 style="属性1:属性值1; 属性2:属性值2; " 内容</标签名>
+
+
+2.内部样式表(内嵌样式表)
+   是将css代码集中写在HTML文档的head头部标签中,并且用style标签定义
+
+   选择器(选中的标签)
+   <head>
+   <style type="text/CSS">
+        选择器{
+            属性1: 属性值1;
+            属性2: 属性值2;
+            属性3: 属性值3;
+        }
+   </style>
+   </head>
+
+
+   <style>
+    div{
+        color:red;
+        fot-size: 12px;
+    }
+   </style>
+
+
+
+style标签一般位于head标签中,当然理论上他可以放在HTML文档的任何地方
+type="text/css"  在html5中可以省略
+只能控制当前的页面
+
+
+3.外部样式表(外链式)
+    是将所有的样式放在一个或多个以.CSS为扩展名的外部样式表文件中
+    通过link标签将外部样式表文件连接到HTM文档中
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="css文件路径"/>
+    </head>
+    注意:link是但标签
+    link笔钱需要放在head头部标签中,并且制定link标签的三个属性
+

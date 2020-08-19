@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>font字体</title>
+    <style>
+        body {
+            font-size: 16px;   /* 大小 */
+        }
+        .title {
+            /* 字体大小 */
+            font-size: 20px;
+            /* 设置字体 */
+            font-family:Arial, Helvetica, sans-serif; /* 字体 可以同事制定多个字体,中间以逗号隔开, 表示如果浏览器不支持第一个字体,直接找到合适的字体*/
+            /* 字体加粗 */
+            font-weight: bold; /* 字体粗细 */
+
+            /* 字体风格  italic倾斜  normal正常*/
+            font-style: italic;
+        }
+        .title2 {
+            font-size: 20px;
+            font-family: "\5B8B\4F53"; /* 字体 Unicode字体*/
+            /* 字体粗细 100-900  400等同于normal  700等同于blod */
+            /* 一定不要跟单位 */
+            font-weight: 700;
+        }
+        h1 {
+            /* 让粗体不加粗 */
+            /* font-weight: normal; */
+            font-weight: 400;
+        }
+        em {
+            /* 让倾斜的字体 不倾斜 */
+            font-style: normal;
+        }
+        /* 
+        选择器{font: font-style font-weight font-size/line-height font-family;}
+        使用font属性时,必须按照上面愈发格式中的顺序书写,不鞥更换顺序,各个属性以空格隔开
+        其中不需要设置的属性可以省略(取默认值),但必须保留font-size和font-family属性,否则font属性将不起作用
+         */
+        .title3 {
+            /* 综合设置字体样式 */
+            font: italic bold 20px "微软雅黑";
+        }
+    </style>
+</head>
+<body>
+    <!-- Unicode字体 -->
+
+
+
+
+    <p class="title">里的链接的空间领导的</p>
+    <p class="title2">道格拉道格拉斯家来决定了d道格拉斯家来决定了d道格拉斯家来决定了d斯家来决定了d</p>
+    <p>啦啦啦啦啦</p>
+    <p class="title3">的坎坎坷坷坎坎坷坷坎坎坷坷看看</p>
+    <p>的坎坎坷坷看看快递快放假快点放假类三等奖的开发建设了</p>
+    <h1>零零落落</h1>
+    <h2>零零落落</h2>
+    <em>零零落落</em>
+    
+</body>
+</html>

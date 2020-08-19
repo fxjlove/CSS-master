@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>外边距合并-嵌套块元素垂直外边距的合并(塌陷)</title>
+
+  <style>
+
+    .father {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      /* 嵌套关系 垂直外边距合并 解决方案 */
+      /* 方案一:可以为父元素定义上边框  transparent透明 */
+      border-top: 1px solid transparent;
+      /* 方案二: 可以给父级指定一个 上padding值; */
+      /* padding-top: 1px; */
+      /* 方案三:可以为父元素添加overflow:hidden */
+      overflow: hidden;
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: purple;
+      /* 只添加这个没有效果 */
+      margin-top: 100px;
+    }
+
+    
+   
+   
+  </style>
+</head>
+<body>
+
+<!-- 
+
+    2.嵌套块元素垂直外边距的合并(塌陷)
+    对于两个嵌套关系的块元素,如果父元素没有上内边距及边框,
+    父元素的上外边距会与子元素的上外边距发生合并
+    合并后的外边距为两者中的较大者
+
+    解决方案:
+    可以为父元素定义上边框
+    可以为父元素定义上内边距
+    可以为父元素添加overflow:hidden
+    还有其他方法,比如浮动、固定、绝对定位的盒子不会有问题
+ -->
+
+<div class="father">
+  <div class="son"></div>
+</div>
+</body>
+</html>

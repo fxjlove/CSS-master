@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景位置(postion)重点</title>
+
+    <style>
+        .bg {
+            width: 800px;
+            height: 500px;
+            /* 背景颜色 */
+            background-color: pink;
+            /* 背景图片 1.必须加url  2.url里面的地址不要加引号 */
+            background-image: url(../image/header_woman.png);
+            /* 图片背景图片不平铺 */
+            background-repeat: no-repeat;
+            /* 背景位置 */
+            /* 如果postion后面是精确坐标,那么第一个肯定是x 是10  第二个肯定是y 是50*/
+            /* background-position: 10px 50px; */
+            /* 一下说明x10像素 y垂直居中的 */
+            /* background-position: 10px; */
+
+            /* 如果制定两个值,精确单位和方位名字混合使用,则第一个值是x坐标,第二个值是y坐标 */
+            background-position: 10px center;
+          
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    
+    background-position: length || length
+
+    background-position: position || position
+
+    length      百分数|由浮点数字和单位标识符组成的长度值
+    position    top|center|bottom|left|center|right 防卫名词
+    
+    注意:
+        必须先制定background-image属性
+        position后面是x坐标和y坐标,可以使用方位名词或者精确单位
+        如果只指定了一个方位名词,另一个默认居中,为50%
+        如果只制定了一个数值,那该数值用于x坐标,另一个默认是y坐标,默认居中
+        如果制定两个值,两个值都是方位名词,则两个值前后顺序无关,比如left,top和top,left效果一致
+        如果制定两个值,精确单位和方位名字混合使用,则第一个值是x坐标,第二个值是y坐标
+        如果postion后面是精确坐标,那么第一个肯定是x 第二个肯定是y
+
+        实际工作用的最多的,就是背景图片居中对齐了
+        实际工作用的最多的,就是背景图片居中对齐了
+    -->
+
+    <div class="bg">
+        123
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动口诀之特</title>
+    <style>
+        /* 浮动元素默认之间没有空隙 和真正的行内块不一样 */
+        /* 在一行显示,三个div都要设置浮动属性 */
+        /* 注意:浮动的元素相互贴靠一起的,但是如果父级宽度装不下这些浮动的盒子,多出的盒子会另起一行对齐 */
+      .one,
+      .two {
+          width: 200px;
+          height: 200px;
+          background-color:pink;
+      }
+      .one {
+        float: left;
+      }
+      .two {
+          background-color: purple;
+          float: left;
+      }
+      .three {
+          float: left;
+          width: 200px;
+          height: 200px;
+          background-color: blue;
+      }
+
+    </style>
+</head>
+<body>
+    <!-- 
+
+        3.浮动口诀之 特
+        浮动--特性 float属性会改变元素display属性
+        任何元素都可以浮动,浮动元素会生成一个块级框,而不论它本身是何种元素,生成的块级框和我们前面的行内块及其相似
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+             /*转换为行内块元素,可以水平显示,不过 div之间有间隙, 不方便处理 */
+            /* display: inline-block */
+
+            /*设置浮动属性,可以让div 水平排列,并且没有间隙 */
+            float: left;
+        }
+     -->
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+</html>

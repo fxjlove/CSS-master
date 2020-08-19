@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动的方法-使用after伪元素清除浮动</title>
+    <style>
+         /* ~~~~~~~~~~~~~~~~清除浮动begin~~~~~~~~~~~~~~~~*/
+         /* 声明清除浮动的样式 */
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix {
+            /* ie7,7专门清除浮动的样式 */
+            *zoom: 1;
+        } 
+        /* ~~~~~~~~~~~~~~~~清除浮动end~~~~~~~~~~~~~~~~*/
+
+
+        .one {
+            width: 500px;
+            background-color: pink;
+            border: 1px solid red;
+        }
+        .damao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        .ermao {
+            float: left;
+            width: 250px;
+            height: 250px;
+            background-color: skyblue;
+        }
+        .two {
+            width: 700px;
+            height: 150px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+       3.使用after伪元素清除浮动
+            :alter 方式为空元素额外标签法的升级版,好处是不用单独加标签了
+            使用方法:
+                .clearfix:after {content:"";display:block; height: 0;clear: both; visibility: hidden;}
+
+                .clearfix {*zoom:1;} IE6\7专有
+
+            优点:符合闭合浮动思想 结构语义化正确
+            缺点: 由于IE6-7不支持:after ,使用zoom:1触发hasLayout
+            代表网站:百度、淘宝网、网易等
+
+     -->
+    <div class="one clearfix">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    
+    <div class="two"></div>
+</body>
+</html>

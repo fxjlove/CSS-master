@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS优先级(重点)-权重叠加</title>
+
+    <style>
+        /* 出现了权重叠加的现象 */
+        /* .nav a 权重 0,0,1,0 +0,0,0,1= 0,0,1,1 */
+        .nav a {
+            color: red;
+        }
+        /* 没变色 */
+        /* first 权重 0,0,1,0 */
+        /* .first {
+            color: pink;
+        } */
+
+        .nav .first {
+            color: pink;
+        }
+
+
+
+
+        
+
+    
+    </style>
+</head>
+<body>
+    <!-- 
+
+          1.权重计算公式
+
+            标签选择器                  权重计算公式
+            继承或者*                    0,0,0,0
+            每个元素(标签选择器)          0,0,0,1
+            每个类,伪类                  0,0,1,0
+            每个ID                      0,1,0,0
+            每个行内样式style=""          1,0,0,0
+            每个 !important重要的         ∞无穷大          !important 在样式属性的后面添加 权重最高∞  教育局局长
+            
+
+
+
+        2.权重叠加
+        我们经常用交集选择器,后代选择器等,是有多个基础选择器组合而成,那么此时,就会出现权重叠加
+
+        就会死一个简单的加法计算
+        div ul li    0,0,0,3
+
+        .nav ul li   0,0,1,2
+
+        a:hover      0,0,1,1
+
+        .nav a       0,0,1,1
+
+
+        注意:1.位数之间没有进制 比如说: 0,0,0,5 +0 ,0,0,5 = 0,0,0,10而不是0,0,1,0 所以不会存在10个div能赶上一个类选择器的情况
+        2.集成的权重是0
+        3.如果权重相同,则会根据层叠性,就近原则
+        3.2个特殊标签 链接 和 h 标题 他们浏览器有自己默认的样式,继承权重为0,所以我们还是要单独给链接和标题一个样式
+    
+     -->
+
+   
+   <div>人生四大悲</div>
+   <div class="nav">
+       <a href="#" class="first">家里没宽带</a>
+       <a href="#">网速不够快</a>
+       <a href="#">手机没流量</a>
+       <a href="#">公司无wifi</a>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>案例-新浪导航栏2</title>
+
+  <style>
+
+    /* 清除元素默认的内外边距 */
+     * {
+       margin: 0;
+       padding: 0;
+     }
+
+    /* 新浪导航:新浪导航栏的核心就是因为里面的紫薯不一样多,所有我们不方便给宽度,还是给paddin,撑开盒子的 */
+    
+    .nav {
+      height: 41px;
+      background-color: #FCFCFC;
+      /* 上边框 */
+      border-top: 3px solid #FF8500;
+      /* 下边框 */
+      border-bottom: 1px solid #EDEEF0;
+
+    }
+
+    .nav a {
+      /* 转换为行内块 */
+      display: inline-block;
+      height: 41px;
+      /* 代表 上下是0 左右是20 内边距 */
+      padding: 0 20px;
+      /* 垂直居中 */
+      line-height: 41px;
+      color: #4c4c4c;
+      /* 取消下划线 */
+      text-decoration: none;
+      font-size: 12px;
+      
+    }
+    .nav a:hover {
+      background-color: #eee;
+    }
+
+  </style>
+</head>
+<body>
+
+
+ <div class="nav">
+    <a href="#">设为首页</a>
+    <a href="#">手机新浪网</a>
+    <a href="#">移动客户端</a>
+    <a href="#">博客</a>
+    <a href="#">微博</a>
+    <a href="#">关注我</a>
+ </div>
+ 
+  
+</body>
+</html>

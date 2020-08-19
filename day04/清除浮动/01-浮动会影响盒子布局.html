@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动会影响盒子布局</title>
+    <style>
+        /* one 是父级,但是很多情况下,不方便给高度  子盒子有多少内容,就显示多少内容,自动撑开父亲最为合理 */
+        .one {
+            width: 500px;
+            background-color: pink;
+        }
+        /* 因为父级盒子很多情况下,不方便给高度,但是盒子浮动就不占有位置,最后父级盒子高度为0,就影响饿了下面的标准盒子 */
+        /* 因为damao  ermao浮动了 ,不占有位置, 而父级又没有高度,所以two 就到底下去了 */
+        .damao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        .ermao {
+            float: left;
+            width: 250px;
+            height: 250px;
+            background-color: skyblue;
+        }
+        .two {
+            width: 700px;
+            height: 150px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        总结:
+            由于浮动元素不再占有原文档流的位置,所以它会对后面的元素排版产生影响
+            准确地说,并不是清除浮动,而是清除浮动后造成的影响
+     -->
+    <div class="one">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    
+    <div class="two"></div>
+</body>
+</html>

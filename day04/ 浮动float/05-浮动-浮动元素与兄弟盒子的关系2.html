@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素与兄弟盒子的关系</title>
+    <style>
+      
+      .father {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+      }
+      .demo {
+        /* float: left; */
+        width: 150px;
+        height: 150px;
+        background-color: purple;
+      }
+      .ermo {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      /* .sanmo {
+        float: left;
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+      } */
+
+    </style>
+</head>
+<body>
+ <!-- 
+      2.浮动元素与兄弟盒子的关系
+        在一个父盒子中,如果前一个兄弟盒子是:
+            浮动的,那么当前盒子会与前一个盒子的顶部对齐
+            普通流的,那么当前盒子会显示在前一个兄弟盒子的下方
+
+        浮动只会影响当前的或者是后面的盒子,不会影响前面的标准流
+
+
+
+        如果一个盒子里有多个子盒子,如果其中一个盒子浮动了,其他兄弟也应该浮动,防止引起问题
+  -->
+
+  <!-- .father>.demo+.ermo -->
+  <div class="father">
+    <div class="demo"></div>
+    <div class="ermo"></div>
+    <!-- <div class="sanmo"></div> -->
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小说排行榜</title>
+
+  <style>
+    table ,
+    td ,
+    th {
+      border: 1px solid deeppink;
+      /* 让我们的表格 单元格 th 合并相邻的边框 */
+      border-collapse: collapse;
+
+    }
+
+    .hotpink {
+      background-color: hotpink;
+    }
+    .pink {
+      background-color: pink;
+    }
+  </style>
+  </style>
+</head>
+<body>
+<!-- 
+    表格的细线边框:
+    通过表格的 cellspacing="0",将单元格与单元格之间的距离设置为0
+    但是两个格之间的边框会出现重叠,从而使边框变粗
+    通过css属性:
+    table{border-collapse:collapse;}
+    collapse单词是合并的意思
+    border-collapse:collapse;表示相邻边框合并在一起
+  
+  -->
+  <table cellspacing="0" width="800" height= "350" align="center">
+    <caption><h3>小说排行榜</h3></caption>
+    <tr class="hotpink">
+      <th>排名</th>
+      <th>关键词</th>
+      <th>趋势</th>
+      <th>今日搜索</th>
+      <th>最近七日</th>
+      <th>相关链接</th>
+    </tr>
+    <tr class="pink">
+      <td>1</td>
+      <td>鬼吹灯</td>
+      <td>
+        <img src="img/login_bg_bst.png" />
+      </td>
+      <td>367</td>
+      <td>3423</td>
+      <td>
+        <a href="#">贴吧</a>
+        <a href="#">图片</a>
+        <a href="#">百科</a>
+      </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>鬼吹灯</td>
+        <td>12</td>
+        <td>367</td>
+        <td>3423</td>
+        <td>
+          <a href="#">贴吧</a>
+          <a href="#">图片</a>
+          <a href="#">百科</a>
+        </td>
+      </tr>
+      <tr class="pink">
+          <td>3</td>
+          <td>鬼吹灯</td>
+          <td>12</td>
+          <td>367</td>
+          <td>3423</td>
+          <td>
+            <a href="#">贴吧</a>
+            <a href="#">图片</a>
+            <a href="#">百科</a>
+          </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>鬼吹灯</td>
+            <td>12</td>
+            <td>367</td>
+            <td>3423</td>
+            <td>
+              <a href="#">贴吧</a>
+              <a href="#">图片</a>
+              <a href="#">百科</a>
+            </td>
+          </tr>
+          <tr class="pink">
+              <td>5</td>
+              <td>鬼吹灯</td>
+              <td>12</td>
+              <td>367</td>
+              <td>3423</td>
+              <td>
+                <a href="#">贴吧</a>
+                <a href="#">图片</a>
+                <a href="#">百科</a>
+              </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>鬼吹灯</td>
+                <td>12</td>
+                <td>367</td>
+                <td>3423</td>
+                <td>
+                  <a href="#">贴吧</a>
+                  <a href="#">图片</a>
+                  <a href="#">百科</a>
+                </td>
+              </tr>
+              <tr class="pink">
+                  <td>7</td>
+                  <td>鬼吹灯</td>
+                  <td>12</td>
+                  <td>367</td>
+                  <td>3423</td>
+                  <td>
+                    <a href="#">贴吧</a>
+                    <a href="#">图片</a>
+                    <a href="#">百科</a>
+                  </td>
+                </tr>
+  </table>
+  
+  
+</body>
+</html>

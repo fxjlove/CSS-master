@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>外边距-插入图片和背景图片区别</title>
+
+  <style>
+       
+    .pic {
+      width: 500px;
+      height: 200px;
+      border: 1px solid red;
+      /* padding: 30xp; 移动位置*/
+    }
+    .pic img {
+      /* 移动位置 */
+      margin: 30px;
+    }
+   
+    .bg {
+      height: 200px;
+      background: url(../image/menu_bg.png) no-repeat;
+      background-position: 30px 30px;
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+
+   插入图片和背景图片区别
+    1.插入图片 我们用的最多 比如产品展示类 移动位置只能考盒模型padding margin
+    2.背景图片我们一般用于小图标背景 或者 超大背景图片, 背景图片 只能通过background-position
+
+    img {
+        width:200px;  插入图片更呆大小 width 和 height
+        height:210px;
+        margin-top: 30px;  插入图片更改位置 可以用margin 或 padding 盒模型
+        margin-left: 50px; 插入当图片也是一个盒子
+    }
+
+     div {
+        width:400px;
+        height:400px;
+        border: 1px solied purple;
+        background:#fff url(image/sun.jpg) no-repeat;
+        background-position30px 50px;  背景图片更改位置 我用background-position30px 50px;
+    }
+
+
+   -->
+ 
+   <div class="pic">
+     <img src="../image/header_woman.png" alt="">
+   </div>
+
+   <div class="bg"></div>
+ 
+  
+</body>
+</html>

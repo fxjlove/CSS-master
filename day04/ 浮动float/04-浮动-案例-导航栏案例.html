@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动-案例-导航栏案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .banner {
+            width: 760px;
+            height: 150px;
+            background-color: pink;
+            margin: auto;
+        }
+        .banner img {
+            height: 100%;
+            width: 100%;
+        }
+        .nav {
+            width: 760px;
+            height: 32px;
+            background-color: pink;
+            margin: 0 auto;
+            background: url(../../image/menu_bg.png) no-repeat;
+        }
+        .nav ul li {
+            /* 因为li让文字竖着显示,所以必须给li 添加浮动 */
+            float: left;
+        }
+        .nav ul li a {
+            /* a是行内元素,需要转换 */
+            /* 一定给a大小,因为我们需要a:hover */
+            display: block;
+            width: 80px;
+            height: 32px;
+            text-decoration: none;
+            background: url(../../image/response_sheet_blue.png) no-repeat;
+            font-size: 12px;
+            color: #40510a;
+            /* 文字水平居中 */
+            text-align: center;
+            /* 文字垂直居中 */
+            line-height: 32px;
+            
+        }
+        .nav ul li a:hover {
+            background: url(../../image/response_sheet_channel.png) no-repeat;
+        }
+      
+    </style>
+</head>
+<body>
+   <!-- banner 是广告条的意思 -->
+   <div class="banner">
+       <img src="../../image/b7c2e5c62dfcaae720a3cd909c0eae52.jpg" alt="">
+   </div>
+   <!-- nav 导航栏部分 -->
+   <!-- 
+       注意:事件重要的额导航栏汇总,我们不会直接用链接a而是用li包含链接(li+a)的做法
+        1.  li+a 语意更清晰,一看这就有事有条理的列表型内容
+        2.  如果直接用a,搜索引擎容易辨别为有堆砌关键字嫌疑(故意堆砌关键字容易被搜索引擎有降权的风险),从而影响网站排名
+ -->
+   <div class="nav">
+      <!-- 以后我们重要的导航栏,都要采取 li包含a 的写法 -->
+        <!-- ul>li*6>a -->
+       <ul>
+           <li><a href="#">网站首页</a></li>
+           <li><a href="#">网站首页</a></li>
+           <li><a href="#">网站首页</a></li>
+           <li><a href="#">网站首页</a></li>
+           <li><a href="#">网站首页</a></li>
+           <li><a href="#">网站首页</a></li>
+       </ul>
+   </div>
+</body>
+</html>

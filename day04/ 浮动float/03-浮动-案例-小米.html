@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动-案例-小米</title>
+    <style>
+        /* 清除元素默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 清除列表样式  前面的小点点*/
+        li {
+            list-style: none;
+        }
+        .box {
+            width: 1226px;
+            height: 615px;
+            background-color: pink;
+            margin: auto;
+        }
+        .left {
+            float: left;
+            width: 234px;
+            height: 615px;
+            background-color: purple;
+        }
+        .left img {
+            /* width: 234px; */
+            width: 100%;
+        }
+        .right {
+            float: right;
+            width: 992px;
+            height: 615px;
+            background-color: skyblue;
+        }
+        .right li {
+            float: left;
+            width: 234px;
+            height: 300px;
+            background-color: pink;
+            margin-left: 14px;
+            margin-bottom: 14px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 浮动float的应用(重要)
+    浮动和标准流的父盒子搭配
+    我们知道,浮动式脱标的,会影响下面的标准流元素,此时,我们需要给浮动的元素添加一个标准流的父亲,这样,最大化的见笑了对其他标准流的影响
+    一个完整的网页,是 标准流 + 浮动+ 定位一起完成的 -->
+
+    <div class="box">
+        <div class="left">
+            <img src="../../image/574c6643ab91c6618bfb2d0e2c761d0b.jpg" alt="">
+        </div>
+        <div class="right">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

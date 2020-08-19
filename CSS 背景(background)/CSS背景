@@ -1,0 +1,70 @@
+
+四:CSS背景 background
+
+1.背景颜色(color)
+
+    background-color:颜色值;   默认的值是transparent 透明的
+
+2.背景图片(image)
+
+    background-image:none | url(url)
+
+    none 无背景图(默认的)
+
+    url  使用绝对或相对地址制定背景图像
+
+3.背景平铺(repeat)
+    background-repeat: repeat | no-repeat |repeat-x |repeat-y
+
+    repeat      背景图像在纵向和横向上平铺(默认的)
+    
+    no-repeat   背景图像不平铺
+
+    repeat-x    背景图像在横向平铺
+
+    repeat-y    背景图像在纵向平铺
+
+4.背景位置(position)重点
+
+    background-position: length || length
+
+    background-position: position || position
+
+    length      百分数|由浮点数字和单位标识符组成的长度值
+    position    top|center|bottom|left|center|right 防卫名词
+    
+    注意:
+        必须先制定background-image属性
+        position后面是x坐标和y坐标,可以使用方位名词或者精确单位
+        如果只指定了一个方位名词,另一个默认居中,为50%
+        如果只制定了一个数值,那该数值用于x坐标,另一个默认是y坐标,默认居中
+        如果制定两个值,两个值都是方位名词,则两个值前后顺序无关,比如left,top和top,left效果一致
+        如果制定两个值,精确单位和方位名字混合使用,则第一个值是x坐标,第二个值是y坐标
+        如果postion后面是精确坐标,那么第一个肯定是x 第二个肯定是y
+
+        实际工作用的最多的,就是背景图片居中对齐了
+
+5.背景附着
+    背景附着就是解释背景是滚动的还是固定的
+
+    background-attachment: scrool | fixed
+
+    scrool  背景图像是随对象内容滚动
+
+    fixed   背景图像固定
+
+6.背景简写
+    background:属性的值的书写顺序官方并没有强制的标准的,为了可读性,建议大家如下写:
+    background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置
+
+    background: transparent url(image.jpg) repeat-y scrool center top;
+
+7.背景透明(CSS3)
+    background: rgba(0,0,0,0.3)
+    最后一个参数是alpha透明度 取值范围0-1之间
+    我们习惯把0.3的0省略掉 这样写 background:rgba(0,0,0,.3);
+    注意:背景半透明是指盒子背景半透明,盒子里面的内容不受影响
+
+
+    
+

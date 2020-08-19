@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>内边距-padding不影响盒子大小情况</title>
+
+  <style>
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+   
+    p {
+      /* width: 200px; */
+      height: 30px;
+      background-color: purple;
+      padding-left: 30px;
+      /* 特殊情况,如果这个盒子没有宽度 则padding 不会撑开盒子 */
+
+    }
+
+
+  </style>
+</head>
+<body>
+<!-- 
+
+  padding不影响盒子大小情况:
+    如果没有给一个盒子制定宽度,此时,如果给这个盒子指定padding,则不会撑开盒子
+ -->
+
+  <div>
+    <p></p>
+  </div>
+  
+</body>
+</html>
