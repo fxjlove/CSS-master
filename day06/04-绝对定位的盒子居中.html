@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位的盒子居中</title>
+
+    <style>
+      
+       div {
+           /* position: relative; */
+           /* 绝对定位 margin 左右auto 不能让盒子水平居中 */
+
+           /* 1.left:50%; 让盒子的左侧移动到父级元素的水平中心位置
+              2.margin-left:-100px; 让盒子向左移动自身宽度的一半 */
+           position: absolute;
+           /* left: 50%; 走父亲宽度的一半 */
+           left: 50%;
+           /* margin-left 左走自己宽度的一半 一定注意是 负值 */
+           margin-left: -100px;
+
+
+           width: 200px;
+           height: 200px;
+           background-color: purple;
+
+
+           /* 标准流 margin 左右auto 就可以让盒子水平居中 */
+           /* margin: 0 auto; */
+       }
+        
+    </style>
+</head>
+<body>
+   <!-- 
+       1.绝对定位的盒子居中
+        注意:绝对定位/固定定位的盒子 不能通过设置margin:auto 设置水平居中
+        在使用绝对定位时想要实现水平橘棕,可以按照下图的方法
+        1.left:50%; 让盒子的左侧移动到父级元素的水平中心位置
+        2.margin-left:-100px; 让盒子向左移动自身宽度的一半
+    -->
+    <div></div>
+
+   
+</body>
+</html>

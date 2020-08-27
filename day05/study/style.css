@@ -13,12 +13,17 @@ body {
     /* 方便些代码,一会别忘了删除 */
     /* height: 3000px; */
 }
+/* 取消下划线 */
 a {
     text-decoration: none;
 }
 /* 清除列表样式 */
 li{
     list-style: none;
+}
+/* 取消表单的轮廓线 */
+input {
+    outline: none;
 }
 /* 清除浮动的 */
 .clearfix:before,
@@ -39,7 +44,26 @@ li{
      width: 1200px;
      margin: auto;
  }
+ /* ************************** */
+/* 
+盒子贴近版心的固定定位:
+公式:
+1.left:50%
+2.往左走版心的一半 + 自己的宽度
+ */
+ .fixedbar{
+     position: fixed;
+     top: 150px;
+     left: 50%;
+     /* -600是版心的一半 + 180是自己的宽度  = 780px */
+     margin-left: -780px;
+     z-index: 999;
 
+    width: 180px;
+    height: 420px;
+    background-color: pink;
+ }
+/* ************************** */
  /* header start */
  .header {
      /* width: 1200px; */
@@ -298,6 +322,9 @@ li{
 }
 
 .box-bd li {
+    /* ************************** */
+    position: relative;
+    /* ************************** */
     float: left;
     width: 228px;
     height: 270px;
@@ -309,6 +336,22 @@ li{
 .box-bd li img {
     width: 100%;
 }
+
+/* ************************** */
+.box-bd .hot {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 40px;
+}
+.box-bd .new {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 40px;
+}
+/* ************************** */
+
 .box-bd li h4 {
     margin: 20px 20px;
     font-size: 14px;

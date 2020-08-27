@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信导航栏</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      body {
+        background: url(../image/banner.png) repeat-x;
+      }
+      .nav {
+        margin-top: 20px;
+      }
+      .nav li {
+        float: left;
+        margin: 0 5px;
+      }
+      .nav a {
+        display: inline-block;
+        height: 33px;
+        background: url(../image/customer_orange_lightcolor.png) no-repeat;
+        padding-left: 15px;
+        color: #fff;
+        line-height: 30px;
+        font-size: 14px;
+      }
+      .nav a span {
+        display: inline-block;
+        height: 33px;
+        background: url(../image/customer_orange_lightcolor.png) no-repeat right;
+        padding-right: 15px;
+      }
+
+      /* 鼠标经过了 a 链接首先换背景图片  然后 链接里面的span也要换 */
+      /* .nav a:hover {
+        background-image: url(../image/customer_blue_lightcolor.png);
+      }
+      .nav a:hover span {
+        background-image: url(../image/customer_blue_lightcolor.png);
+      } */
+
+      .nav a:hover ,
+      .nav a:hover span {
+        background-image: url(../image/customer_blue_lightcolor.png);
+      }
+      
+
+    </style>
+</head>
+<body>
+  <!-- 总结:
+1.a 设置 背景左侧, padding撑开合适宽度
+2.span 设置 背景右侧  , padding撑开合适宽度,剩下由文字继续撑开宽度
+3.之所以a包含span就是因为整个导航都是可以点击的 -->
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="#">
+          <span>首页</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>帮助与反馈</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>公众平台</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>开放平台</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>三个字</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+</body>
+</html>

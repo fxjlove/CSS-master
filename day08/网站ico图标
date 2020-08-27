@@ -1,0 +1,10 @@
+网站ico图标
+
+https://www.mi.com/favicon.ico   favicon.ico
+
+
+一.使用ico图标
+
+1.首先把favicon.ico这个图标放到根目录下
+2.在html里面, head之间引入代码
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />

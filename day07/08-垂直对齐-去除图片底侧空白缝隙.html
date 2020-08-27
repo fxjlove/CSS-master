@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直对齐-去除图片底侧空白缝隙</title>
+    <style>
+       div {
+         border: 1px solid red;
+       }
+       div img {
+         /* 因为默认是基线对齐,所以底侧有空白缝隙 */
+         /* vertical-align: baseline; */
+
+         /* 解决方法一: 1.只要不是 基线对齐就好了 */
+         /* vertical-align: bottom; */
+         /* vertical-align: top; */
+         /* vertical-align: middle; */
+
+         /* 解决方法二: 2.块级元素来说 vertical-align:是无效的 就不会有基线对齐的方式了*/
+         display: block;
+
+       }
+    </style>
+</head>
+<body>
+  <!-- 
+    去除图片底侧空白缝隙
+    原因:
+      图片或者表单等行内块元素,他的底线回纥父级盒子的基线对齐
+      就是图片底侧会有一个空白缝隙
+
+    解决方法就是:
+        1.给img verrical-align:middle | top | bottom 等等,让图片不要和基线对齐
+
+        2.给img 添加diaplay: block;转换为块级元素就不会存在问题了
+   -->
+  <div>
+    <img src="../image/news_study_left.png"  alt="" class="one">
+  </div>
+
+
+</body>
+</html>
